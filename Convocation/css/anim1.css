@@ -1,0 +1,190 @@
+
+--background-image: url('../images/iitkgpview_blue.png');
+
+.circle {
+	position: relative;
+	width: 160px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	outline: 30px solid rgba(0,0,0,0.35);
+	outline-offset: -15px;
+}
+
+.circle img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+	object-position: top;
+	border-radius: inherit;
+}
+
+.circle::before,
+.circle::after {
+	position: absolute;
+	z-index: -1;
+	content: '';
+	inset: -40px;
+	border-radius: inherit;
+	background-image: conic-gradient(#1E90FF 25%,#800080 50%,#EDED76,#1E90FF);
+	animation: rotate 3s linear infinite;
+}
+
+.circle::after {
+	filter: blur(2rem);
+	opacity: 0.7;
+}
+
+.circle:hover::before,
+.circle:hover::after {
+	animation-play-state: paused;
+}
+
+@keyframes rotate {
+	/*from {
+		rotate: 0deg;
+	}*/
+	
+	to {
+		rotate: 360deg;
+	}
+}
+
+.earth {
+  width: 40vw; /* Responsive width */
+  height: 40vw; /* Keep it square */
+  max-width: 250px; /* Prevent excessive size on larger screens */
+  max-height: 250px;
+  background-size: 100%; /* Ensure proper scaling */
+
+  /*width: 250px;
+  height: 250px; */
+  //background-image: var(--background-image);    
+  background-image: url('http://apna.iitkgp.ac.in/pj/assets/images/iitkgpview_blue.png');
+  border-radius: 50%;
+  background-size: 610px;
+  /*box-shadow: inset 8px 36px 80px 36px rgb(215, 75, 103), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);*/
+  box-shadow: inset 8px 36px 80px 36px var(--secondary-color-dark), inset -6px 0 12px 4px rgba(255, 255, 255, 0.5);
+  animation-name: rotate;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotate;
+     -webkit-animation-duration: 12s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: linear;
+  position: relative;
+}
+
+.earth::before,
+.earth::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: rotateAround 6s linear infinite;
+  box-sizing: border-box;
+}
+
+.earth::before {
+  width: 45vw;
+  height: 45vw;
+  max-width: 280px;
+  max-height: 280px;
+  border-width: 5vw;
+
+  border: 30px solid rgba(231, 243, 99, 0.8); /* circle with a wider border */
+}
+
+.earth::after {
+  width: 50vw;
+  height: 50vw;
+  max-width: 300px;
+  max-height: 300px;
+  border-width: 4vw;
+  
+  /*width: 300px;
+  height: 300px;*/
+  border: 25px solid rgba(219, 89, 3, 0.8); /* Yellow circle with a thinner border */
+  animation-direction: reverse; /* Opposite rotation for variety */
+}
+
+.target-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.target-lines::before,
+.target-lines::after {
+  content: '';
+  position: absolute;
+  background: rgba(246, 246, 160, 0.5);
+  border-radius: 2px;
+}
+
+/* Horizontal line */
+.target-lines::before {
+  width: 50%;
+  height: 3px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Vertical line */
+.target-lines::after {
+  width: 3px;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@keyframes rotate {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 610px 0px;
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 610px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .earth {
+    width: 170px;
+    height: 170px;
+  }
+
+  .earth::before {
+    width: 200px;
+    height: 200px;
+    border-width: 15px;
+  }
+
+  .earth::after {
+    width: 220px;
+    height: 220px;
+    border-width: 12px;
+  }
+}
+
+
+

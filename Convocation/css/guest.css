@@ -1,0 +1,257 @@
+.card {
+  position: relative;
+  border-radius: 100px 0 0 100px;
+  border: 2px solid #CC6633;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+
+}
+
+.card-wrapper {
+  width: 100%;
+}
+
+.card.d-flex.flex-row {
+  display: flex;
+  align-items: stretch; /* Ensures children get full height */
+  min-height: 100%;     /* or a specific height if needed */
+}
+
+.custom-card {
+  display: flex;
+  align-items: stretch;
+  min-height: 100%; /* Needed if inside section without height */
+}
+
+.left-section {
+  background-color: #e7f1ff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;       /* <-- Vertically center */
+  justify-content: center;   /* <-- Horizontally center */
+  border-radius: 100px 0 0 100px;
+  width: 140px;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.circle-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/*
+.circle-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff; 
+  box-shadow: 0 0 8px rgba(0,0,0,0.1); 
+}*/
+
+.content-section-banner {
+  /*padding: 1rem 1.5rem;
+  flex: 1; */
+  color: #CC6633;
+  text-shadow: none;
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: center;
+  
+  
+}
+
+.content-section-banner h4{
+	font-weight: 600;
+}
+
+.chief-guest-label {
+    position: absolute;
+    bottom: -20px; /* adjust as needed */
+    left: 20px; /* aligns label horizontally with card's content */
+    background-color: #CC6633;
+    padding: 5px 10px;
+    border-radius: 30px 10px 30px 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 0.8rem;
+    border: 1px solid #F6F6A0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+
+@media (max-width: 767px) {
+  .card.d-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-section {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    background-color: #FFFFFF;
+  }
+
+  .content-section-banner {
+    text-align: center;
+  }
+	
+  .content-section-banner h4,
+  .content-section-banner h6 {
+    font-size: 0.7rem;
+  }
+  
+  
+}
+
+@media (max-width: 767px) {
+  .chief-guest-label {
+    font-size: 0.6rem !important;
+    padding: 3px 6px;
+    bottom: -15px; /* adjust as needed */
+    left: 30px;    /* adjust as needed */
+  }
+  .content-section-banner h6 {
+    font-size: 0.5rem;
+  }
+}
+
+
+
+
+
+
+.goh-section {
+	background: #F2C780;
+	text-align: center;
+    font-size: 1rem;
+    color: #C66427;
+    font-weight: 600;
+    padding-top: 60px;
+    padding-bottom: 60px;
+       
+}
+
+.guest-card {
+        background-color: #f0f8ff;
+        padding: 20px;
+        border-radius: 10px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+    .guest-card .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* centers horizontally too */
+        text-align: center;  /* optional: to center text */
+    }
+}
+
+
+.guest-card-2 {
+	background-color: #fffaf0;
+}
+
+.goh {
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.goh-section .container {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    
+}
+
+.goh-section .row {
+    width: 100%; /* Ensure the row spans the full container width */
+}
+
+.goh-section img {
+    border-radius: 20%;
+    border: 2px solid #C66427; /* Orange border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 150px; /* Fixed size for uniformity */
+    height: auto;
+    margin-bottom: 15px; /* Spacing below image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.goh-section img:hover {
+    box-shadow: 0 8px 20px rgba(198, 100, 39, 0.8); /* Glowing orange backlight effect */
+}
+
+
+
+.goh-section h4, h6 {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Hindi Text Styling */
+.goh-section h4:first-of-type {
+    font-family: 'Noto Sans Devanagari', sans-serif; /* Font for Hindi text */
+    font-size: 1.25rem;
+    color: #A52A2A; /* Darker text for readability */
+    font-weight: 600;
+    /*text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-text-stroke: 1px #8F4416; 
+    text-stroke: 1px #8F4416; */
+}
+
+/* English Text Styling */
+.goh-section h4:last-of-type {
+    font-family: 'Roboto', sans-serif; /* Clean font for English text */
+    font-size: 1.2rem;
+    color: #A52A2A;
+    font-weight: 600;
+    /*text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-text-stroke: 1px #8F4416; 
+    text-stroke: 1px #8F4416;  */
+}
+
+/* Subtext Styling */
+.goh-section h6 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: #9E4913; /* Lighter text color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+    .goh-section h4, h6 {
+        font-size: 1rem;
+    }
+    .goh-section h4:first-of-type, h4:last-of-type {
+        font-size: 1.1rem;
+    }
+}
+
+
+.desktop-pr {
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .desktop-pr {
+    padding-right: 130px;
+  }
+}
+

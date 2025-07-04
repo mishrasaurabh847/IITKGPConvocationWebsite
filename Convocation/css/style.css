@@ -1,0 +1,385 @@
+body {
+	scroll-behavior: smooth;
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.sticky-menu {
+    position: sticky;
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 1020; /* Ensures the navbar stays on top of other elements */
+    background-color: #343a40; /* Matches Bootstrap's `navbar-dark` background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+.nav-link {
+	color: #FFFFFF;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+
+.banner {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: visible;
+  background: url('../images/convoBanner.jpg') no-repeat center center/cover;
+  display: flex;
+  /*align-items: center;*/
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
+ 
+  align-items: flex-start; /* Align content to the top */
+  
+  flex-wrap: wrap;   
+}
+
+.banner h1{
+	color: white;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner .hindi {	
+	font-weight: bold;
+}
+
+.banner .noto {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.banner .baloo {
+  font-family: 'Baloo 2', cursive;
+}
+
+/* Default top padding for desktop screens */
+.banner-padding {
+    padding-top: 80px; /* Example for desktop screens */
+}
+
+@media (max-width: 767px) {
+  .banner {
+    font-size: 1.2rem;
+  }
+  
+  .banner .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .banner-padding {
+    padding-top: 0px; 
+  }
+  
+  
+}
+
+@media (max-width: 767px) {
+  .card-wrapper .hindi {
+    font-weight: 700 !important; /* Bold font */
+    font-size: 1rem;
+  }
+}
+
+
+.heading-wrapper {
+  align-items: center; /* Or flex-start, depending on alignment preference */
+  flex-wrap: wrap;
+}
+
+.convocation-number h1 {
+  font-size: 4rem; /* Adjust as needed */
+  margin: 0;
+  line-height: 1;
+}
+
+.convocation-text h1 {
+  font-size: 2rem; /* Adjust as needed */
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+
+
+
+
+
+.date-display {
+    display: inline-block;
+    background-color: #f8f9fa;  /* Light background */
+    padding: 10px 20px;  /* Spacing around the text */
+    border-radius: 30px;  /* Rounded corners */
+    /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1) !important;   Subtle shadow for depth */
+    text-shadow: none !important;
+    /*font-family: 'Arial', sans-serif;   Clean font */
+    font-family: 'Roboto', sans-serif;
+    font-stretch: condensed;
+    color: #A52A2A;  /* Dark text color */
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1rem;  /* Slightly larger font */
+}
+
+.date-display h5 {
+    margin: 0;
+    font-weight: bold;  /* Bold text for emphasis */
+}
+
+.chief-guest {
+	display: block !important;
+    background-color: #8B6914;  /* Light background */
+    padding: 5px 5px;  /* Spacing around the text */
+    border-radius: 20px;  /* Rounded corners */
+    text-shadow: none !important;
+    font-family: 'Arial', sans-serif;  /* Clean font */
+    color: #F4F49F;  /* Dark text color */
+    text-align: center;
+    margin-top: 15px; /* Adjust spacing between image and text */
+    font-size: 1rem;  /* Slightly larger font */
+}
+
+.chief-guest-img:hover{
+	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+	.medalist-card {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+	.banner-padding {
+        padding-top: 55px; /* Example for mobile screens */
+    }
+    .banner {
+        height: 100vh; /* Adjust height for smaller screens */
+        font-size: 1.5rem; /* Reduce font size */
+        background-size: cover; /* Ensure background image covers the div */
+    }
+    .row {
+        text-align: center; /* Ensure text is centered on smaller screens */
+    }
+    h1, h2 {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+    .img-size-mobile {
+		width: 40% !important;
+		height: auto !important;
+	}
+	.chief-guest-img {
+		width: 40% !important;
+		/*height: auto !important;*/
+	}
+	 
+    .date-display {
+        padding: 5px 15px;  /* Reduced padding for smaller screens */
+        font-size: 0.9rem !important;  /* Adjust font size on mobile */
+    }
+
+    .date-display h5 {
+        font-size: 1rem !important; /* Increase the size of h5 text on mobile */
+    }
+}
+
+/* Default image size for larger screens */
+.img-fluid {
+    width: 70%;
+    height: auto;
+}
+
+
+
+
+.sticky-menu {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background: #343a40;
+}
+
+.gold-medalists, .silver-medalists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px; /* Space between cards */
+    align-items: stretch; /* Ensure cards stretch to the same height */
+    width: 100%; /* Ensure the container takes the full width */
+    /*height: 100%;  Ensure the container can expand vertically */
+    overflow: visible;
+}
+
+.medalist-card {
+    flex: 1 1 calc(33.333% - 15px);  /* 3 cards per row, accounting for gap */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #C66427;
+    text-align: center;
+    /*align-items: center;*/
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; /* Include padding and border in the element's total height/width */
+    position: relative;
+    /*height: 100%;  Ensure all cards stretch to the same height */
+    /*margin: 0 7px;  Add horizontal margin to prevent border clipping */
+    margin: 15px 0px 15px 15px; /* Add margin to allow zoom effect */
+    overflow: hidden; /* Prevent overflow of content */
+    padding-bottom: 50px;
+}
+
+.medalist-card h4, 
+.medalist-card h5 {
+    margin-bottom: 20px; /* Add spacing between the elements */
+    z-index: 2; /* Ensure medalist name stays visible */
+    position: relative; /* Ensure proper stacking order */
+}
+
+
+/* Optional: Make sure the images scale well and don’t overflow */
+.medalist-card img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition for image zoom */
+    border: 2px solid transparent; /* Default border */
+}
+
+/* Apply the zoom effect only on the card's contents or image */
+.medalist-card:hover img {
+    transform: scale(1.01); /* Zoom image only */
+}
+
+.medalist-card img:hover {
+    display: inline-block;
+    transform: scale(1.1); /* Slight zoom effect */
+    transition: transform 0.3s ease; /* Smooth transition */
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+img:hover {
+    display: inline-block;
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: transform 0.3s ease; /* Smooth transition */    
+}
+
+
+/* Apply zoom to the card */
+.medalist-card:hover {
+    transform: scale(1.05); /* Zoom effect */
+    transform-origin: center center; /* Zoom from the center */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Prevent clipping of borders and content when zooming */
+.medalist-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;  /* Adjust as needed */
+}
+
+/* This class ensures that cards are given enough room to zoom without clipping */
+.medalist-card-container .medalist-card {
+   margin: 15px;  /*Add margin to give space for zooming */
+}
+
+.medalist-card:last-child {
+	margin-right: 0;
+}
+
+/* Prevent margin issue for the last card */
+.gold-medalists .medalist-card:last-child,
+.silver-medalists .medalist-card:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+	background: #1A1A1A;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+}
+
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+ /* Ensure the cards list is horizontal and scrollable */
+  .cards {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: thin; /* For Firefox */
+      scrollbar-color: #888 transparent; /* Scrollbar color */
+      gap: 16px; /* Space between cards */
+      padding: 10px 0;
+      list-style: none;
+      margin: 0;
+  }
+
+  /* Style the scrollbar */
+  .cards::-webkit-scrollbar {
+      height: 8px;
+  }
+
+  .cards::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+  }
+
+  .cards::-webkit-scrollbar-track {
+      background: transparent;
+  }
+
+  /* Style each card */
+  .card {
+      display: block;
+      width: 230px; /* Adjust width as needed */
+      text-align: center;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+  }
+
+  .card:hover {
+      transform: scale(1.05);
+  }
+
